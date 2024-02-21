@@ -5,7 +5,11 @@ import { formatToUrl } from "../../tools";
 export function NavBar() {
   const location = useLocation();
   return (
-    <div className={"flex flex-row items-center content-between gap-x-8"}>
+    <div
+      className={
+        "flex-row items-center content-between gap-x-4 lg:gap-x-8 hidden md:flex"
+      }
+    >
       {menuItems.map((name, i) => (
         <NavLink
           key={i}

@@ -1,11 +1,28 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "./ui-components";
+import { AuthDialog, Header } from "./ui-components";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext, AuthProvider } from "./contexts";
 
 export function App() {
+  const [authDialog, setAuthDialog] = useState<"sign-up" | "log-in" | null>(
+    null
+  );
+  const auth = useContext(AuthContext);
+
+  useEffect(() => {
+    if (auth?.user === null) {
+      setAuthDialog("sign-up");
+    }
+  }, []);
+
   return (
-    <div>
-      <Header />
+    <AuthProvider>
+      <Header
+        onSignUpOpen={() => setAuthDialog("sign-up")}
+        onLogInOpen={() => setAuthDialog("log-in")}
+      />
+      <AuthDialog show={authDialog} onClose={() => setAuthDialog(null)} />
       <Outlet />
-    </div>
+    </AuthProvider>
   );
 }

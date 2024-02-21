@@ -41,7 +41,6 @@ export function BookingSection() {
               }))
             }
             type="number"
-            defaultValue={1}
             value={bookingState.person}
             min={1}
             className=" border-b-2 border-black"
