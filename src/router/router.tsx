@@ -1,31 +1,51 @@
-import { createBrowserRouter } from "react-router-dom";
+import { NavLink, Navigate, createBrowserRouter } from "react-router-dom";
 import { App } from "../App";
-import { Home } from "../screens";
+import { Blog, Explore, Home, Pricing, SignUp } from "../screens";
+import { LogIn } from "../screens/log-in";
+
 const NotFoundPage = () => {
   return (
-    <div>
-      <App />
+    <div className=" grid place-items-center">
       <h1 className="m-4 text-center font-rubik text-3xl">404 not found</h1>
+      <NavLink
+        to={"/"}
+        className={"m-4 text-center font-rubik text-2xl text-lime-800"}
+      >
+        Reload
+      </NavLink>
     </div>
   );
 };
+
 export const router = createBrowserRouter([
   {
+    path: "/authentification",
+    children: [
+      {
+        path: "/authentification",
+        element: <Navigate to={"/authentification/log-in"} />,
+      },
+      { path: "sign-up", element: <SignUp />, errorElement: <NotFoundPage /> },
+      { path: "log-in", element: <LogIn />, errorElement: <NotFoundPage /> },
+    ],
+  },
+
+  {
     path: "/",
-    Component: App,
-    ErrorBoundary: NotFoundPage,
+    element: <App />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         path: "/",
-        Component: Home,
+        element: <Home />,
       },
       {
         path: "/explore",
-        Component: () => <div>explore</div>,
+        element: <Explore />,
       },
       { path: "/travel", Component: () => <div>travel</div> },
-      { path: "/blog", Component: () => <div>blog</div> },
-      { path: "/pricing", Component: () => <div>pricing</div> },
+      { path: "/blog", element: <Blog /> },
+      { path: "/pricing", element: <Pricing /> },
     ],
   },
 ]);

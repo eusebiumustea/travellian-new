@@ -17,6 +17,7 @@ export default {
         surface: "#FFD2C7",
         secoundary: "#331811",
         secoundarySurface: "#61291C",
+        bottomSurface: "#172432",
         placeholder: "#767E86",
       },
     },
