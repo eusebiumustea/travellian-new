@@ -58,12 +58,14 @@ const pricingInfo: OfferCardProps[] = [
 ];
 export function Pricing() {
   return (
-    <Carousel
-      title="Special Offer"
-      subtitle="Check out our special offer and discounts"
-      data={pricingInfo}
-      reverseHeader
-      renderItem={(props, i) => <OfferCard {...props} key={i} />}
-    />
+    <div className="py-36">
+      <Carousel
+        title="Special Offer"
+        subtitle="Check out our special offer and discounts"
+        data={pricingInfo}
+        itemsToShow={4}
+        renderItem={(props, i) => <OfferCard {...props} key={i} />}
+      />
+    </div>
   );
 }

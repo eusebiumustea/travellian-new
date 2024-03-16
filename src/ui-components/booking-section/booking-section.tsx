@@ -10,9 +10,9 @@ export function BookingSection() {
     checkOut: new Date().toDateString(),
   });
   return (
-    <div className="flex flex-row justify-between w-auto max-w-7xl  rounded-r-xl bg-white">
-      <div className="flex flex-row  gap-10 pl-16 items-center">
-        <div className="flex flex-col">
+    <div className="flex flex-col md:flex-row justify-between lg:mr-[26%] md:mr-[18%] m-4 md:m-0 md:rounded-none md:rounded-r-xl rounded-xl bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 py-16 md:py-8 justify-center px-9 gap-12 items-center">
+        <div className="flex flex-col gap-3">
           <h1 className="font-rubik uppercase text-base text-placeholder">
             Destination
           </h1>
@@ -26,10 +26,10 @@ export function BookingSection() {
               }))
             }
             type="text"
-            className=" border-b-2 border-black"
+            className="border-b-2 border-black py-3 md:py-0 lg:text-base text-2xl font-playfair"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-3">
           <h1 className="font-rubik uppercase text-base text-placeholder">
             Person
           </h1>
@@ -43,10 +43,10 @@ export function BookingSection() {
             type="number"
             value={bookingState.person}
             min={1}
-            className=" border-b-2 border-black"
+            className=" border-b-2 border-black py-3 md:py-0 lg:text-base text-2xl font-playfair"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-3">
           <h1 className="font-rubik uppercase text-base text-placeholder">
             Check in
           </h1>
@@ -60,10 +60,10 @@ export function BookingSection() {
               }))
             }
             type="datetime-local"
-            className=" border-b-2 border-black"
+            className=" border-b-2 border-black py-3 md:py-0 lg:text-base text-2xl font-playfair"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-3">
           <h1 className="font-rubik uppercase text-base text-placeholder">
             Check out
           </h1>
@@ -77,11 +77,11 @@ export function BookingSection() {
               }))
             }
             type="datetime-local"
-            className=" border-b-2 border-black"
+            className=" border-b-2 border-black py-3 md:py-0 lg:text-base text-2xl font-playfair"
           />
         </div>
       </div>
-      <button className="flex flex-row items-center justify-center h-full rounded-r-xl py-16 px-6 bg-primary gap-9">
+      <button className="flex flex-row items-center justify-center h-full  md:rounded-r-xl py-16 px-6 bg-primary gap-9">
         <h1 className="font-playfair text-4xl text-white">Book Now</h1>
         <Arrow />
       </button>

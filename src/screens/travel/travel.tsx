@@ -1,5 +1,6 @@
 import { BlogPost } from "../../ui-components";
-export function Blog() {
+
+export function Travel() {
   return (
     <div className="pt-36">
       <BlogPost

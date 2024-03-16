@@ -9,12 +9,12 @@ export function OfferCard({
   image,
 }: OfferCardProps) {
   return (
-    <div className="flex flex-col w-[492px]">
+    <div className={`flex flex-col mr-9`}>
       <img
         src={image}
         className="object-cover w-full h-[200px] rounded-t-3xl"
       />
-      <div className="flex flex-col px-6 py-8 bg-[#FFF8F1] rounded-b-3xl gap-2">
+      <div className="flex flex-col px-6 py-3 md:py-8 bg-[#FFF8F1] rounded-b-3xl md:gap-2">
         <h1 className="font-rubik text-2xl text-placeholder">{destination}</h1>
         <div className="flex flex-row items-center gap-1">
           {new Array(reviews).fill(<Star />)}

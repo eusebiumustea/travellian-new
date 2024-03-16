@@ -1,16 +1,14 @@
-import { NavLink, useLocation } from "react-router-dom";
 import { menuItems } from "../../constants";
-import { formatToUrl } from "../../tools";
+import { scrollToIndex } from "../../tools";
 
 export function NavBar() {
-  const location = useLocation();
   return (
     <div
       className={
         "flex-row items-center content-between gap-x-4 lg:gap-x-8 hidden md:flex"
       }
     >
-      {menuItems.map((name, i) => (
+      {/* {menuItems.map((name, i) => (
         <NavLink
           key={i}
           to={name === "Home" ? "/" : formatToUrl(name)}
@@ -20,6 +18,15 @@ export function NavBar() {
         >
           {name}
         </NavLink>
+      ))} */}
+      {menuItems.map((name, i) => (
+        <div
+          onClick={() => scrollToIndex(i)}
+          key={i}
+          className={`select-none cursor-pointer inline-block border-primary font-rubik text-white text-lg`}
+        >
+          {name}
+        </div>
       ))}
     </div>
   );

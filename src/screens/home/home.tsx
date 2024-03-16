@@ -1,15 +1,14 @@
-import { BookingSection, BottomSection, Welcome } from "../../ui-components";
+import { BookingSection, Welcome } from "../../ui-components";
 export function Home() {
   return (
-    <div className="absolute top-0">
+    <>
       <img
-        className="object-cover w-screen  h-screen"
+        className="object-cover w-screen h-[200vh] md:h-screen"
         src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
       />
-
       <div
         className={
-          "flex flex-col justify-center gap-44 w-full  h-screen z-10 absolute top-0"
+          "flex flex-col justify-center gap-[10vh] w-full h-[150vh] md:h-screen z-10 absolute top-0 md:mt-16 mt-[30vh]"
         }
       >
         <Welcome
@@ -19,7 +18,6 @@ journey with us."
         />
         <BookingSection />
       </div>
-      <BottomSection />
-    </div>
+    </>
   );
 }

@@ -1,13 +1,18 @@
-import { Outlet } from "react-router-dom";
-import { Header } from "./ui-components";
 import { useAuthListener } from "./hooks";
+import { Blog, Explore, Home, Pricing, Travel } from "./screens";
+import { BottomSection, Header } from "./ui-components";
 
 export function App() {
   useAuthListener();
   return (
     <>
       <Header />
-      <Outlet />
+      <Home />
+      <Explore />
+      <Travel />
+      <Blog />
+      <Pricing />
+      <BottomSection />
     </>
   );
 }

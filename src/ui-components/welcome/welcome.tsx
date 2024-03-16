@@ -4,8 +4,12 @@ type WelcomeTypes = {
 };
 export function Welcome({ title, subtitle }: WelcomeTypes) {
   return (
-    <div className={"flex flex-col items-start gap-4"}>
-      <h1 className={"font-playfair text-4xl md:text-8xl text-white space-y-7"}>
+    <div className={"flex flex-col items-start gap-5"}>
+      <h1
+        className={
+          "font-playfair text-2xl sm:text-5xl md:text-6xl lg:text-8xl text-white m-auto"
+        }
+      >
         {title}
       </h1>
       <h1 className={"font-rubik text-2xl text-white"}>{subtitle}</h1>

@@ -1,6 +1,6 @@
 import { NavLink, Navigate, createBrowserRouter } from "react-router-dom";
 import { App } from "../App";
-import { Blog, Explore, Home, Pricing, SignUp } from "../screens";
+import { SignUp } from "../screens";
 import { LogIn } from "../screens/log-in";
 
 const NotFoundPage = () => {
@@ -34,18 +34,18 @@ export const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <NotFoundPage />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/explore",
-        element: <Explore />,
-      },
-      { path: "/travel", Component: () => <div>travel</div> },
-      { path: "/blog", element: <Blog /> },
-      { path: "/pricing", element: <Pricing /> },
-    ],
+    // children: [
+    //   {
+    //     path: "/",
+    //     element: <Home />,
+    //   },
+    //   {
+    //     path: "/explore",
+    //     element: <Explore />,
+    //   },
+    //   { path: "/travel", Component: () => <div>travel</div> },
+    //   { path: "/blog", element: <Blog /> },
+    //   { path: "/pricing", element: <Pricing /> },
+    // ],
   },
 ]);
