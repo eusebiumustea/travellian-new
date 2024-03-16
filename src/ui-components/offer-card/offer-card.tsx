@@ -9,7 +9,7 @@ export function OfferCard({
   image,
 }: OfferCardProps) {
   return (
-    <div className={`flex flex-col mr-9`}>
+    <div className={`flex flex-col mx-3`}>
       <img
         src={image}
         className="object-cover w-full h-[200px] rounded-t-3xl"
