@@ -1,8 +1,5 @@
-import { NavLink } from "react-router-dom";
-import { Logo } from "../../assets";
-import { menuItems } from "../../constants";
-import { formatToUrl } from "../../tools";
 import { Newsletter } from "..";
+import { Logo } from "../../assets";
 
 export function BottomSection() {
   return (
@@ -14,7 +11,7 @@ export function BottomSection() {
             Copyright © Travellian 2020 All rights reserved
           </h1>
         </div>
-        <div className="flex flex-col gap-4">
+        {/* <div className="flex flex-col gap-4">
           <h1 className="font-rubik font-medium text-white text-2xl pb-2">
             Menu
           </h1>
@@ -28,7 +25,7 @@ export function BottomSection() {
               {name}
             </NavLink>
           ))}
-        </div>
+        </div> */}
         <div className="flex flex-col gap-4">
           <h1 className="font-rubik font-medium text-white text-2xl pb-2">
             Information

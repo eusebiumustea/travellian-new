@@ -9,12 +9,12 @@ export function Carousel<T>({
   data,
   title,
   subtitle,
-  reverseHeader = false,
+
   itemsToShow = 3,
 }: CarouselProps<T>) {
   const sliderRef = useRef<Slider>(null);
   return (
-    <div className="flex flex-col gap-7 mx-20 md:gap-24 lg:mx-32">
+    <div className="flex flex-col gap-7 mx-5 md:mx-20 md:gap-24 lg:mx-32">
       <div className="flex flex-row justify-between w-full items-center md:items-end">
         <PostHeader title={title} subtitle={subtitle} />
         <div className="md:flex flex-row gap-10 hidden">
@@ -71,7 +71,7 @@ export function Carousel<T>({
       <div className="flex flex-row gap-10 md:hidden justify-center">
         <button
           onClick={() => sliderRef.current?.slickPrev()}
-          className="p-3 rounded-lg bg-slate-900"
+          className={`p-3 rounded-lg bg-slate-900`}
         >
           <VectorLeft />
         </button>

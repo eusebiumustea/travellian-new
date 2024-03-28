@@ -1,6 +1,6 @@
 export function Newsletter() {
   return (
-    <div className="w-full  flex-col flex md:flex-row bg-white py-10 justify-center px-12 rounded-3xl gap-10 self-center">
+    <div className="w-full m-4 flex-col flex md:flex-row bg-white py-10 justify-center px-12 rounded-3xl gap-10 self-center">
       <h1 className=" text-3xl md:text-5xl text-placeholder font-playfair self-center">
         Our Newsletter
       </h1>

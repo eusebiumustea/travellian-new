@@ -3,12 +3,12 @@ export function Home() {
   return (
     <>
       <img
-        className="object-cover w-screen h-[200vh] md:h-screen"
+        className="object-cover w-screen h-[180vh] md:h-screen"
         src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
       />
       <div
         className={
-          "flex flex-col justify-center gap-[10vh] w-full h-[150vh] md:h-screen z-10 absolute top-0 md:mt-16 mt-[30vh]"
+          "flex flex-col justify-center gap-[10vh] w-full h-[140vh] md:h-screen z-10 absolute top-0 md:mt-16 mt-[25vh]"
         }
       >
         <Welcome

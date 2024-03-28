@@ -33,7 +33,7 @@ export function SignUp() {
 
   return (
     <div className="flex justify-center items-center w-full h-screen">
-      <div className="flex flex-col justify-center items-center rounded-3xl shadow-2xl gap-6 py-16 px-8">
+      <div className="flex flex-col justify-center items-center rounded-3xl shadow-2xl gap-4 md:gap-6 py-16 px-8">
         <Logo />
         <h1 className=" text-slate-950 font-rubik text-2xl">
           Create new account
@@ -68,7 +68,7 @@ export function SignUp() {
                 {...formState.register("name", {
                   required: { value: true, message: "Please write name" },
                 })}
-                className="py-3 w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
+                className="py-3 md:w-96 px-2 outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
                 placeholder="Enter your name"
               />
               <h1 className="font-rubik text-amber-700">
@@ -86,7 +86,7 @@ export function SignUp() {
                     message: "Entered value must be valid email",
                   },
                 })}
-                className="py-3 w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
+                className="py-3 md:w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
                 placeholder="Enter your email"
               />
               <h1 className="font-rubik text-amber-700">
@@ -102,7 +102,7 @@ export function SignUp() {
                       "You need a strong password that contains at least 8 characters",
                   },
                 })}
-                className="py-3 w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
+                className="py-3 md:w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
                 placeholder="Enter password"
               />
               <h1 className="font-rubik text-amber-700">
@@ -120,7 +120,7 @@ export function SignUp() {
                       ? "Please confirm correct password!"
                       : undefined,
                 })}
-                className="py-3 w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
+                className="py-3 md:w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
                 placeholder="Confirm password"
               />
               <h1 className="font-rubik text-amber-700">

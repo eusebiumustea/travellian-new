@@ -5,12 +5,12 @@ import { Arrow } from "../../assets";
 
 export function BlogPost({ title, image, description }: BlogPostProps) {
   return (
-    <div className="flex flex-col md:mx-20 lg:mx-44 items-start justify-start mt-11">
+    <div className="flex flex-col md:mx-20 mx-4 lg:mx-44 items-start justify-start mt-11">
       <PostHeader
         title="Our Blog"
         subtitle="An insight the incredible experience in the world"
       />
-      <div className="flex flex-col md:flex-row items-center gap-8 mt-10">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mt-10">
         <img
           src={image}
           className="rounded-3xl w-[400px] h-[600px] object-cover"

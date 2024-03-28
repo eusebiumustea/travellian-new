@@ -10,3 +10,4 @@ export * from "./newsletter";
 export * from "./offer-card";
 export * from "./post-header";
 export * from "./welcome";
+export * from "./mobile-nav";

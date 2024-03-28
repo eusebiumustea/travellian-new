@@ -1,18 +1,20 @@
-import { useAuthListener } from "./hooks";
+import { useState } from "react";
 import { Blog, Explore, Home, Pricing, Travel } from "./screens";
-import { BottomSection, Header } from "./ui-components";
+import { BottomSection, Header, MobileNav } from "./ui-components";
+import { AuthProvider } from "./contexts";
 
 export function App() {
-  useAuthListener();
+  const [mobileMenu, setMobileMenu] = useState(false);
   return (
-    <>
-      <Header />
+    <AuthProvider>
+      <MobileNav opened={mobileMenu} onClose={() => setMobileMenu(false)} />
+      <Header onMenuOpen={() => setMobileMenu(true)} />
       <Home />
       <Explore />
       <Travel />
       <Blog />
       <Pricing />
       <BottomSection />
-    </>
+    </AuthProvider>
   );
 }

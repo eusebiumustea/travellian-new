@@ -2,7 +2,7 @@ import { Carousel, DestinationCard } from "../../ui-components";
 
 export function Explore() {
   return (
-    <div className="pt-36">
+    <div className="pt-16 md:pt-36">
       <Carousel
         itemsToShow={4}
         title="Popular Destinations"

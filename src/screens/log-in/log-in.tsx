@@ -61,7 +61,7 @@ export function LogIn() {
                   },
                 })}
                 type="email"
-                className="py-3 w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
+                className="py-3 md:w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
                 placeholder="Enter your email"
               />
               <h1 className="text-orange-500">
@@ -72,7 +72,7 @@ export function LogIn() {
                   required: { value: true, message: "Password required" },
                 })}
                 type="password"
-                className="py-3 w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
+                className="py-3 md:w-96 px-2   outline-none border-2 rounded-xl font-rubik text-slate-950 text-xl"
                 placeholder="Enter password"
               />
               <h1 className="text-orange-500">

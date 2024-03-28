@@ -1,7 +1,7 @@
 import { BlogPost } from "../../ui-components";
 export function Blog() {
   return (
-    <div className="pt-36">
+    <div className="pt-16 md:pt-36">
       <BlogPost
         image="https://farm5.staticflickr.com/4462/37576372521_6e7d65abef_b.jpg"
         title="Beautiful Italy

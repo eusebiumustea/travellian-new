@@ -60,7 +60,7 @@ export function BookingSection() {
               }))
             }
             type="datetime-local"
-            className=" border-b-2 border-black py-3 md:py-0 lg:text-base text-2xl font-playfair"
+            className="w-full md:w-auto border-b-2 border-black py-3 md:py-0 lg:text-base text-2xl font-playfair"
           />
         </div>
         <div className="flex flex-col gap-3">
@@ -77,7 +77,7 @@ export function BookingSection() {
               }))
             }
             type="datetime-local"
-            className=" border-b-2 border-black py-3 md:py-0 lg:text-base text-2xl font-playfair"
+            className="w-full md:w-auto border-b-2 border-black py-3 md:py-0 lg:text-base text-2xl font-playfair"
           />
         </div>
       </div>
