@@ -12,6 +12,7 @@ export function Header({ onMenuOpen }: { onMenuOpen: () => void }) {
   const auth = getAuth(firebaseApp);
   const [expandOptions, setExpandOptions] = useState(false);
   const nav = useNavigate();
+
   return (
     <div
       className={

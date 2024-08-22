@@ -13,7 +13,12 @@ export function LogIn() {
       nav("/");
     }
   }, []);
-
+  useEffect(() => {
+    const subscribe = window.addEventListener("blur", () =>
+      console.log("leaved")
+    );
+    return subscribe;
+  }, []);
   const formState = useForm({
     defaultValues: {
       email: "",

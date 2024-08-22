@@ -58,7 +58,7 @@ const pricingInfo: OfferCardProps[] = [
 ];
 export function Pricing() {
   return (
-    <div className="py-16 md:py-36">
+    <div className="py-16 md:py-36" id="pricing">
       <Carousel
         title="Special Offer"
         subtitle="Check out our special offer and discounts"
